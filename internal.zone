@@ -27,8 +27,17 @@ redis	AAAA	fdaa:0:22b7:a7b:aa0:1234:dead:2
 regions.myapp TXT "ams,iad"
 regions.redis TXT "ams,iad"
 
+global.myapp.internal AAAA fdaa:0:22b7:a7b:aa0:1234:dead:2
+					  AAAA fdaa:0:22b7:a7b:aa0:1234:beef:2
+					  AAAA fdaa:0:22b7:a7b:aa0:1234:feef:2
+
+global.redis.internal AAAA fdaa:0:22b7:a7b:aa0:1234:dead:2
+					  AAAA fdaa:0:22b7:a7b:aa0:1234:beef:2
+
 ams.myapp AAAA	fdaa:0:22b7:a7b:aa0:1234:dead:2
+
 iad.myapp AAAA 	fdaa:0:22b7:a7b:aa0:1234:beef:2
+		  AAAA  fdaa:0:22b7:a7b:aa0:1234:feef:2
 
 ams.redis AAAA fdaa:0:22b7:a7b:aa0:1234:dead:2
 iad.redis AAAA fdaa:0:22b7:a7b:aa0:1234:beef:2
@@ -37,6 +46,3 @@ _peer	TXT "interactive-1234-me,interactive-2345-me"
 
 interactive-1234-me._peer.internal	AAAA fdaa:0:22b7:a7b:aa0:1234:dead:2
 interactive-2345-me._peer.internal	AAAA fdaa:0:22b7:a7b:aa0:1234:dead:2
-
-fly-local-6pn	AAAA fdaa:0:22b7:a7b:aa0:1234:beef:2
-fly-global-services	A	10.10.0.1
