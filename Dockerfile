@@ -1,8 +1,6 @@
 FROM alpine:3.13
 
-RUN apk add --no-cache \
-    pdns \
-    pdns-backend-bind 
+RUN apk add --no-cache pdns pdns-backend-bind bind-tools
 
 COPY pdns.conf named.conf internal.zone /etc/pdns
 
